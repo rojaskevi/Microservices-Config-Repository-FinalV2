@@ -121,12 +121,12 @@ Routes:
 #                -      
         RouteClaimsRequirement: 
             userType: SALESMAN   
-        DangerousAcceptAnyServerCertificateValidator: true   
+        DangerousAcceptAnyServerCertificateValidator: true
     -
-        DownstreamPathTemplate: /api/Report
+        DownstreamPathTemplate: /api/Policies
         DownstreamScheme: http
-        UpstreamPathTemplate: /api/Report
-        ServiceName: Microservices.Demo.Report.API
+        UpstreamPathTemplate: /api/Policies
+        ServiceName: Microservices.Demo.Policy.API
         UpstreamHttpMethod: 
             - Post
         AuthenticationOptions:
@@ -135,7 +135,7 @@ Routes:
 #                -
         RouteClaimsRequirement:
             userType: SALESMAN
-        DangerousAcceptAnyServerCertificateValidator: true        
+        DangerousAcceptAnyServerCertificateValidator: true
 GlobalConfiguration:
     RequestIdKey: OcRequestId
     AdministrationPath: /administration
